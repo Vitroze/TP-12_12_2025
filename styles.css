@@ -167,6 +167,8 @@ button {
   transition: all 0.3s ease;
 }
 
+/* Setup About */
+
 .about {
   height: 300px;
   background-color: #e9ebee;
@@ -189,6 +191,7 @@ button {
   line-height: 1.6;
 }
 
+/* Setup Skills */
 .skills {
   height: 350px;
   background-color: #f3f4f6;
@@ -327,6 +330,7 @@ button:hover {
   transition: all 0.3s ease;
 }
 
+/* Setup Contact */
 .contact {
   height: 715px;
   margin-left: 220px;
@@ -376,7 +380,6 @@ button:hover {
 }
 
 /* Setup Footer */
-
 footer {
   height: 73px;
   background-color: #e5e7eb;
