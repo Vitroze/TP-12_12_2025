@@ -5,6 +5,10 @@ body {
   background-color: #f3f4f6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Header Navigation */
 header {
   height: 65px;
