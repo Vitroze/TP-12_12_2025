@@ -46,6 +46,11 @@ header .nav.container button:hover {
   background-color: #e2e8f0;
 }
 
+header .nav.container .nav__links {
+  display: flex;
+  gap: 20px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -61,7 +66,7 @@ button {
 }
 
 /* Section Home */
-.home {
+.hero.container {
   height: 412px;
   display: flex;
   justify-content: center;
@@ -69,20 +74,20 @@ button {
   gap: 281px;
 }
 
-.home p {
+.hero.container p {
   font-size: 1.2rem;
   color: rgba(51, 65, 85, 0.8);
 }
 
-.home .home-content {
+.hero.container .hero__content {
   width: 502px;
 }
 
-.home .home-content h1 {
+.hero.container .hero__content h1 {
   font-size: 2.5rem;
 }
 
-.home .home-content .buttons a {
+.hero.container .hero__content .buttons a {
   width: 164px;
   height: 50px;
   padding: 0 0px;
@@ -98,7 +103,7 @@ button {
   transition: all 0.3s ease;
 }
 
-.home .home-content .buttons a:hover {
+.hero.container .hero__content .buttons a:hover {
   color: white;
   background: #00b7ff;
   background: linear-gradient(
@@ -109,7 +114,7 @@ button {
   font-weight: bold;
 }
 
-.home .home-image img {
+.hero.container .hero__visual img {
   width: 180px;
   height: 180px;
   clip-path: circle(50%);
@@ -123,7 +128,7 @@ button {
   );
 }
 
-.home .home-image img:hover {
+.hero.container .hero__visual img:hover {
   transform: scale(1.1);
   animation: rotateImage 3s infinite linear;
   transition: all 0.3s ease;
@@ -138,7 +143,7 @@ button {
   }
 }
 
-.home .home-image p {
+.hero.container .hero__visual p {
   text-align: center;
   margin-top: 10px;
   font-size: 0.9rem;
@@ -148,7 +153,7 @@ button {
   border-radius: 25px;
 }
 
-.home .home-image p:hover {
+.hero.container .hero__visual p:hover {
   background-color: #00b7ff;
   background: linear-gradient(
     150deg,
@@ -196,13 +201,13 @@ button {
   margin-bottom: 30px;
 }
 
-.skills .skills-container {
+.skills .skills-grid {
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
 
-.skills .skills-container .skill {
+.skills .skills-grid .card {
   width: 334px;
   height: 161px;
   background-color: white;
@@ -211,12 +216,12 @@ button {
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
-.skills .skills-container .skill:hover {
+.skills .skills-grid .card:hover {
   transform: translateY(-10px);
   transition: all 0.3s ease;
 }
 
-.skills .skills-container .skill p {
+.skills .skills-grid .card p {
   width: 280px;
 }
 
@@ -243,7 +248,7 @@ button {
   margin-bottom: 20px;
 }
 
-.projects .content .projects-container {
+.projects .content .projects-grid {
   display: flex;
   justify-content: flex-start;
 
@@ -251,7 +256,7 @@ button {
   margin-bottom: 30px;
 }
 
-.projects .content .projects-container .project {
+.projects .content .projects-grid .project {
   width: 320px;
   height: 200px;
   background-color: white;
@@ -260,18 +265,18 @@ button {
   padding: 0px 20px 0px 25px;
 }
 
-.projects .projects-container .project:hover {
+.projects .projects-grid .project:hover {
   transform: translateY(-10px);
   transition: all 0.3s ease;
 }
 
-.projects .projects-container .project .project-tags {
+.projects .projects-grid .project .project-tags {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
 }
 
-.projects .projects-container .project .project-tags span {
+.projects .projects-grid .project .project-tags span {
   background-color: #e9effd;
   color: #0a66c2;
   padding: 5px 10px;
@@ -279,7 +284,7 @@ button {
   font-size: 0.8rem;
 }
 
-.projects .projects-container .project .project-tags span:hover,
+.projects .projects-grid .project .project-tags span:hover,
 button:hover {
   animation: highlightTag 2s infinite;
 }
@@ -299,11 +304,15 @@ button:hover {
   }
 }
 
+.projects .projects-grid .project--hidden {
+  display: none;
+}
+
 .projects button {
   width: 164px;
   height: 50px;
   padding: 0 0px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 24.5px;
@@ -325,8 +334,8 @@ button:hover {
   margin-bottom: 60px;
 }
 
-.contact input,
-.contact textarea {
+.contact .contact-form input,
+.contact .contact-form textarea {
   width: 100%;
   height: 35px;
   border: 1px solid #d3d3d3;
@@ -337,11 +346,11 @@ button:hover {
   resize: none;
 }
 
-.contact textarea {
+.contact .contact-form textarea {
   height: 150px;
 }
 
-.contact button {
+.contact .contact-form button {
   color: black;
   background-color: transparent;
   border-radius: 60px;
